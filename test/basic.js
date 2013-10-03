@@ -4,15 +4,15 @@ var assert = require('assert'),
 describe('IOSYS', function () {
     function reject(a) { assert.equal(0, a|0) }
 
-    it('should provide isDir()', function () {
-        assert(iosys.isDir('/bin'))     // dir
-        reject(iosys.isDir('/bin/cp'))  // file
-        reject(iosys.isDir('/ninjacy')) // n/a
+    it('should provide is.dir()', function () {
+        assert(iosys.is.dir('/bin'))     // dir
+        reject(iosys.is.dir('/bin/cp'))  // file
+        reject(iosys.is.dir('/ninjacy')) // n/a
     })
 
-    it('should provide isFile()', function () {
-        reject(iosys.isFile('/bin'))     // dir
-        assert(iosys.isFile('/bin/cp'))  // file
-        reject(iosys.isFile('/jesusry')) // n/a
+    it('should provide is.file()', function () {
+        reject(iosys.is.file('/bin'))     // dir
+        assert(iosys.is.file('/bin/cp'))  // file
+        reject(iosys.is.file('/jesusry')) // n/a
     })
 })
