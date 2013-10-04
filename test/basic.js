@@ -28,4 +28,14 @@ describe('IOSYS', function () {
         eq(iosys.esc.attr('<?php "programming" language ?>'),
             '&lt;?php &quot;programming&quot; language ?>')
     })
+
+    it('finder', function () {
+        var dir = process.cwd(),
+            f = iosys.finder(dir + '/lib', dir + '/test')
+
+        eq(f('finder.js'), dir + '/lib/finder.js')
+        eq(f('basic.js'), dir + '/test/basic.js')
+        reject(f('package.json'))
+        reject(f('autoexec.bat'))
+    })
 })
