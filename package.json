@@ -1,6 +1,7 @@
 {
-    "name": "IOSYS",
+    "name": "iosys",
     "version": "0.0.1",
+    "description": "An incoherent library of otherwise systematically reimplemented functions.",
     "author": "Mark Vasilkov (https://github.com/mvasilkov)",
     "main": "IOSYS",
     "scripts": {
