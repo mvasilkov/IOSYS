@@ -1,7 +1,8 @@
 {
     "name": "iosys",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "An incoherent library of otherwise systematically reimplemented functions.",
+    "keywords": ["escape", "fs", "util"],
     "author": "Mark Vasilkov (https://github.com/mvasilkov)",
     "main": "IOSYS",
     "scripts": {
