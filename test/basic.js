@@ -1,20 +1,20 @@
 var assert = require('assert'),
-    iosys  = require('../IOSYS.js')
+    iosys  = require('../iosys')
 
-describe('IOSYS', function () {
+describe('iosys', function () {
     function eq(a, b) { assert.strictEqual(a, b) }
     function reject(a) { assert.equal(0, a|0) }
 
-    it('is.dir', function () {
-        assert(iosys.is.dir('/bin'))     // dir
-        reject(iosys.is.dir('/bin/cp'))  // file
-        reject(iosys.is.dir('/ninjacy')) // n/a
+    it('path.isDir', function () {
+        assert(iosys.path.isDir('/bin'))     // dir
+        reject(iosys.path.isDir('/bin/cp'))  // file
+        reject(iosys.path.isDir('/ninjacy')) // n/a
     })
 
-    it('is.file', function () {
-        reject(iosys.is.file('/bin'))     // dir
-        assert(iosys.is.file('/bin/cp'))  // file
-        reject(iosys.is.file('/jesusry')) // n/a
+    it('path.isFile', function () {
+        reject(iosys.path.isFile('/bin'))     // dir
+        assert(iosys.path.isFile('/bin/cp'))  // file
+        reject(iosys.path.isFile('/jesusry')) // n/a
     })
 
     it('esc.html', function () {

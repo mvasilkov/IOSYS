@@ -1,8 +1,8 @@
 var assert = require('assert'),
     fs     = require('fs'),
-    iosys  = require('../IOSYS.js')
+    iosys  = require('../iosys')
 
-describe('IOSYS.finder', function () {
+describe('iosys.finder', function () {
     function eq(a, b) { assert.strictEqual(a, b) }
     function reject(a) { assert.equal(0, a|0) }
 

@@ -1,17 +1,17 @@
 var assert = require('assert'),
-    git = require('../lib/git')
+    iosys = require('../iosys')
 
-describe('git', function () {
+describe('iosys.git', function () {
     function reject(a) { assert.equal(0, a|0) }
 
-    it('should be usable', function (done) {
+    it('isUsable', function (done) {
         this.timeout(500)
-        git.usable(done)
+        iosys.git.isUsable(done)
     })
 
-    it('should provide isRepo', function () {
-        assert(git.isRepo(process.cwd()))
-        reject(git.isRepo('/bin'))
-        reject(git.isRepo('/shrubbery'))
+    it('isRepo', function () {
+        assert(iosys.git.isRepo(process.cwd()))
+        reject(iosys.git.isRepo('/bin'))
+        reject(iosys.git.isRepo('/wharrgarbl'))
     })
 })
