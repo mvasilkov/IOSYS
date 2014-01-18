@@ -8,7 +8,7 @@ node_modules: package.json
 	@ $(npm) install
 
 jshint: node_modules
-	@ $(jshint) IOSYS.js lib/*.js package.json
+	@ $(jshint) iosys.js lib/*.js test/*.js package.json
 
 mocha: node_modules
 	@ $(mocha) -R spec
